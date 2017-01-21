@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mostly harmless</title>
+    <description>An excursion in the world of fixed points.
+</description>
+    <link>http://yourdomain.com/</link>
+    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 21 Jan 2017 23:23:17 +0530</pubDate>
+    <lastBuildDate>Sat, 21 Jan 2017 23:23:17 +0530</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Pivots and fixed points</title>
+        <description>&lt;p&gt;An exposition of Meunier’s &lt;a href=&quot;http://www.rairo-ro.org/articles/ro/abs/2013/04/ro130042/ro130042.html&quot;&gt;paper&lt;/a&gt;.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Test&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Stay tuned for awesome&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;theorems&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;and&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;pictures.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;and-new-sections&quot;&gt;And new sections&lt;/h2&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathbb{E}=mc^2.&lt;/script&gt;
+
+</description>
+        <pubDate>Sat, 21 Jan 2017 17:51:59 +0530</pubDate>
+        <link>http://yourdomain.com/notes/2017/01/21/Pivots-and-fixed-points.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/notes/2017/01/21/Pivots-and-fixed-points.html</guid>
+        
+        <category>fixed points</category>
+        
+        <category>pivots</category>
+        
+        <category>Sperner</category>
+        
+        <category>Scarf</category>
+        
+        <category>Simplex</category>
+        
+        <category>Lemke-Howson</category>
+        
+        <category>Simplicial complex</category>
+        
+        <category>Primoid</category>
+        
+        <category>Duoid</category>
+        
+        
+        <category>notes</category>
+        
+      </item>
+    
+  </channel>
+</rss>
