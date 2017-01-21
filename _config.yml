@@ -18,6 +18,4 @@ github_username:  RohitVaish
 # Build settings
 markdown: kramdown
 
-# Disqus (for comments)
-# (leave blank to disable Disqus)
-disqus_shortname: https-rohitvaish-github-io
+
