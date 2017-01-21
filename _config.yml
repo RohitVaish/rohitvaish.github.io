@@ -9,10 +9,10 @@
 title: Mostly harmless
 email: undefined.rohitvaish@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  An excursion into the world of fixed points.
+  Fixated at fixed points.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
-#twitter_username: jekyllrb
+twitter_username: #Test
 github_username:  RohitVaish
 
 # Build settings

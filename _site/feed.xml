@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mostly harmless</title>
-    <description>An excursion into the world of fixed points.
+    <description>Fixated at fixed points.
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 Jan 2017 01:10:47 +0530</pubDate>
-    <lastBuildDate>Sun, 22 Jan 2017 01:10:47 +0530</lastBuildDate>
+    <pubDate>Sun, 22 Jan 2017 01:45:37 +0530</pubDate>
+    <lastBuildDate>Sun, 22 Jan 2017 01:45:37 +0530</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
