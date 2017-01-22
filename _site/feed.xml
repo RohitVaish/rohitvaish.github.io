@@ -6,70 +6,111 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 Jan 2017 03:05:43 +0530</pubDate>
-    <lastBuildDate>Sun, 22 Jan 2017 03:05:43 +0530</lastBuildDate>
+    <pubDate>Mon, 23 Jan 2017 01:44:59 +0530</pubDate>
+    <lastBuildDate>Mon, 23 Jan 2017 01:44:59 +0530</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Pivots and fixed points</title>
-        <description>&lt;p&gt;An exposition of Meunier’s &lt;a href=&quot;http://www.rairo-ro.org/articles/ro/abs/2013/04/ro130042/ro130042.html&quot;&gt;paper&lt;/a&gt;.
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Test&lt;/code&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;em&gt;What do the simplex algorithm, Sperner’s lemma, and Scarf’s lemma have in common?&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Stay tuned for awesome&lt;/p&gt;
+&lt;p&gt;In his 2013 &lt;a href=&quot;http://www.rairo-ro.org/articles/ro/abs/2013/04/ro130042/ro130042.html&quot;&gt;paper&lt;/a&gt; titled &lt;em&gt;Computing and Proving with Pivots&lt;/em&gt;, Meunier showed that all of these seemingly disparate algorithms &lt;!--(and others such as [Lemke-Howson algorithm][Lemke-HowsonWiki] and [colorful linear programming][B97ColorfulLP])--&gt; can be understood in terms of a single combinatorial idea called &lt;em&gt;pivoting&lt;/em&gt;. This blog post aims to provide an exposition of Meunier’s paper. We start by revisiting Sperner’s lemma, followed by abstracting out.., and finish by showing how all the algorithms are instantiations of ….&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;theorems&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&quot;sperners-lemma&quot;&gt;Sperner’s lemma&lt;/h3&gt;
 
-&lt;p&gt;and&lt;/p&gt;
+&lt;p&gt;Recall the statement of &lt;a href=&quot;https://en.wikipedia.org/wiki/Sperner&#39;s_lemma&quot;&gt;Sperner’s lemma&lt;/a&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;pictures.&lt;/p&gt;
+  &lt;p&gt;Every Sperner coloring of a triangulation of a $n$-dimensional simplex consists of an odd number of elementary rainbow simplices. In particular, there is at least one.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Test&lt;/p&gt;
+&lt;p&gt;It is convenient to talk about this for $n=2$.&lt;/p&gt;
 
-&lt;p&gt;Test&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/pivots-and-fixed-points/Sperner.png&quot; alt=&quot;Sperner&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Test&lt;/p&gt;
+&lt;p&gt;Proof for the three dimensional case by a walk argument (show that this proof is actually due to &lt;a href=&quot;http://epubs.siam.org/doi/abs/10.1137/0115116&quot;&gt;Scarf&lt;/a&gt;).
+Add picture of triangle.&lt;/p&gt;
 
-&lt;p&gt;Test&lt;/p&gt;
+&lt;p&gt;Here’s an &lt;a href=&quot;https://www.nytimes.com/2014/04/29/science/to-divide-the-rent-start-with-a-triangle.html?_r=0&quot;&gt;application&lt;/a&gt; of Sperner’s lemma to fair division of rent among roommates.&lt;/p&gt;
 
-&lt;p&gt;Test&lt;/p&gt;
+&lt;h3 id=&quot;abstracting-out-the-essentials&quot;&gt;Abstracting out the essentials&lt;/h3&gt;
 
-&lt;p&gt;Test&lt;/p&gt;
+&lt;p&gt;Revisit the above proof.&lt;/p&gt;
 
-&lt;p&gt;Test&lt;/p&gt;
+&lt;p&gt;Point out the essentials ingredients used in our argument
+item 1: ability to move from one member of the set family to another, and yet stay in the family
+item 2: moving from one color-excess to another color-excess
+Q. Does finiteness (or the lack of it) of the size of the family of sets play a role? This is important in the resolution of triangulation.&lt;/p&gt;
 
-&lt;h2 id=&quot;and-new-sections&quot;&gt;And new sections&lt;/h2&gt;
+&lt;p&gt;Abstract out the definition of simplicial complexes
+A family of sets with the “downward closed” property.
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Abstract_simplicial_complex&quot;&gt;&lt;em&gt;abstract simplicial complex&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathbb{E}=mc^2.&lt;/script&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;An &lt;strong&gt;abstract simplicial complex&lt;/strong&gt; is a family of finite sets such that all subsets of any given set in the family also belong to the family.
+Examples: Simplicial complexes used in the applications to come.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A pseudomanifold/primoid/duoid is …
+Revisit the above examples of simplicial complexes.&lt;/p&gt;
+
+&lt;h3 id=&quot;pivoting&quot;&gt;Pivoting&lt;/h3&gt;
+
+&lt;p&gt;Abstract out the definition of pivoting
+Example: Also include Gaussian elimination, if possible.
+Informally, pivoting can be thought of a &lt;em&gt;walk&lt;/em&gt; from one set to another, by removing an element and adding a different element, such that the new set also belongs to the set family. The hope is that pivoting in this manner is improving some underlying objective. Due to finiteness, we will reach the optimum.&lt;/p&gt;
+
+&lt;p&gt;Historical note: It is important to point that the idea of &lt;em&gt;pivoting&lt;/em&gt; is not new—it goes back all the way to Gauss.
+This is not Meunier’s discovery, however his survey on this is the most accessible one.&lt;/p&gt;
+
+&lt;p&gt;Provide pseudocode for pivot-in and pivot-out routines&lt;/p&gt;
+
+&lt;p&gt;Argue that this suffices modulo a proof of termination, which is often ad hoc and problem specific.&lt;/p&gt;
+
+&lt;h3 id=&quot;beyond-pseudomanifolds-complementary-pivoting&quot;&gt;Beyond pseudomanifolds: Complementary Pivoting&lt;/h3&gt;
+
+&lt;h3 id=&quot;simplex-algorithm&quot;&gt;Simplex algorithm&lt;/h3&gt;
+
+&lt;h3 id=&quot;scarfs-lemma&quot;&gt;Scarf’s lemma&lt;/h3&gt;
+
+&lt;!-- Table generated using http://www.tablesgenerator.com/markdown_tables --&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Algorithm&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Simplicial Complex&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Pivoting&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Proof of termination&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Simplex&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Sperner’s lemma&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Scarf’s lemma&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 </description>
         <pubDate>Sat, 21 Jan 2017 17:51:59 +0530</pubDate>
-        <link>http://yourdomain.com/notes/2017/01/21/Pivots-and-fixed-points.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/notes/2017/01/21/Pivots-and-fixed-points.html</guid>
+        <link>http://yourdomain.com/2017/01/21/Pivots-and-fixed-points.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2017/01/21/Pivots-and-fixed-points.html</guid>
         
-        <category>fixed points</category>
-        
-        <category>pivots</category>
-        
-        <category>Sperner</category>
-        
-        <category>Scarf</category>
-        
-        <category>Simplex</category>
-        
-        <category>Lemke-Howson</category>
-        
-        <category>Simplicial complex</category>
-        
-        <category>Primoid</category>
-        
-        <category>Duoid</category>
-        
-        
-        <category>notes</category>
         
       </item>
     

@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pivots and fixed points</title>
-  <meta name="description" content="An exposition of Meunier’s paper.Test">
+  <meta name="description" content="What do the simplex algorithm, Sperner’s lemma, and Scarf’s lemma have in common?">
   <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/notes/2017/01/21/Pivots-and-fixed-points.html">
+  <link rel="canonical" href="http://yourdomain.com/2017/01/21/Pivots-and-fixed-points.html">
   <link rel="alternate" type="application/rss+xml" title="Mostly harmless" href="http://yourdomain.com/feed.xml">
 </head>
 
@@ -77,30 +77,99 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>An exposition of Meunier’s <a href="http://www.rairo-ro.org/articles/ro/abs/2013/04/ro130042/ro130042.html">paper</a>.
-<code class="highlighter-rouge">Test</code></p>
+    <p><em>What do the simplex algorithm, Sperner’s lemma, and Scarf’s lemma have in common?</em></p>
 
-<hr />
+<p>In his 2013 <a href="http://www.rairo-ro.org/articles/ro/abs/2013/04/ro130042/ro130042.html">paper</a> titled <em>Computing and Proving with Pivots</em>, Meunier showed that all of these seemingly disparate algorithms <!--(and others such as [Lemke-Howson algorithm][Lemke-HowsonWiki] and [colorful linear programming][B97ColorfulLP])--> can be understood in terms of a single combinatorial idea called <em>pivoting</em>. This blog post aims to provide an exposition of Meunier’s paper. We start by revisiting Sperner’s lemma, followed by abstracting out.., and finish by showing how all the algorithms are instantiations of ….</p>
 
-<hr />
+<h3 id="sperners-lemma">Sperner’s lemma</h3>
 
-<hr />
-
-<p>Stay tuned for awesome</p>
+<p>Recall the statement of <a href="https://en.wikipedia.org/wiki/Sperner's_lemma">Sperner’s lemma</a>.</p>
 
 <blockquote>
-  <p>theorems</p>
+  <p>Every Sperner coloring of a triangulation of a $n$-dimensional simplex consists of an odd number of elementary rainbow simplices. In particular, there is at least one.</p>
 </blockquote>
 
-<p>and</p>
+<p>It is convenient to talk about this for $n=2$.</p>
+
+<p><img src="/assets/pivots-and-fixed-points/Sperner.png" alt="Sperner" class="img-responsive" /></p>
+
+<p>Proof for the three dimensional case by a walk argument (show that this proof is actually due to <a href="http://epubs.siam.org/doi/abs/10.1137/0115116">Scarf</a>).
+Add picture of triangle.</p>
+
+<p>Here’s an <a href="https://www.nytimes.com/2014/04/29/science/to-divide-the-rent-start-with-a-triangle.html?_r=0">application</a> of Sperner’s lemma to fair division of rent among roommates.</p>
+
+<h3 id="abstracting-out-the-essentials">Abstracting out the essentials</h3>
+
+<p>Revisit the above proof.</p>
+
+<p>Point out the essentials ingredients used in our argument
+item 1: ability to move from one member of the set family to another, and yet stay in the family
+item 2: moving from one color-excess to another color-excess
+Q. Does finiteness (or the lack of it) of the size of the family of sets play a role? This is important in the resolution of triangulation.</p>
+
+<p>Abstract out the definition of simplicial complexes
+A family of sets with the “downward closed” property.
+<a href="https://en.wikipedia.org/wiki/Abstract_simplicial_complex"><em>abstract simplicial complex</em></a></p>
 
 <blockquote>
-  <p>pictures.</p>
+  <p>An <strong>abstract simplicial complex</strong> is a family of finite sets such that all subsets of any given set in the family also belong to the family.
+Examples: Simplicial complexes used in the applications to come.</p>
 </blockquote>
 
-<h2 id="and-new-sections">And new sections</h2>
+<p>A pseudomanifold/primoid/duoid is …
+Revisit the above examples of simplicial complexes.</p>
 
-<script type="math/tex; mode=display">\mathbb{E}=mc^2.</script>
+<h3 id="pivoting">Pivoting</h3>
+
+<p>Abstract out the definition of pivoting
+Example: Also include Gaussian elimination, if possible.
+Informally, pivoting can be thought of a <em>walk</em> from one set to another, by removing an element and adding a different element, such that the new set also belongs to the set family. The hope is that pivoting in this manner is improving some underlying objective. Due to finiteness, we will reach the optimum.</p>
+
+<p>Historical note: It is important to point that the idea of <em>pivoting</em> is not new—it goes back all the way to Gauss.
+This is not Meunier’s discovery, however his survey on this is the most accessible one.</p>
+
+<p>Provide pseudocode for pivot-in and pivot-out routines</p>
+
+<p>Argue that this suffices modulo a proof of termination, which is often ad hoc and problem specific.</p>
+
+<h3 id="beyond-pseudomanifolds-complementary-pivoting">Beyond pseudomanifolds: Complementary Pivoting</h3>
+
+<h3 id="simplex-algorithm">Simplex algorithm</h3>
+
+<h3 id="scarfs-lemma">Scarf’s lemma</h3>
+
+<!-- Table generated using http://www.tablesgenerator.com/markdown_tables -->
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Algorithm</th>
+      <th style="text-align: center">Simplicial Complex</th>
+      <th style="text-align: center">Pivoting</th>
+      <th style="text-align: center">Proof of termination</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Simplex</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Sperner’s lemma</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Scarf’s lemma</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+  </tbody>
+</table>
 
 
   </div>
